@@ -11,5 +11,9 @@ class Student extends Model
       return StudentModel::all();
     }
 
-    
+    public function getById($id)
+    {
+      return StudentModel::where('id',$id)->get();
+    }
+
 }
