@@ -8,6 +8,13 @@ use App\Student;
 
 class MainController extends Controller
 {
+  public function mainPage()
+  {
+    return view('login');
+  }
+  public function checkLogin(){
+
+  }
 
   //test DB connection
   public function testConnection()

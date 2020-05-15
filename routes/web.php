@@ -12,8 +12,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'StudentController@getStudentList');
+Route::get('/', 'MainController@mainPage');
+
+Route::get('/stdlist', 'StudentController@getStudentList');
 
 Route::get('/std/{id?}', 'StudentController@getStudentById');
+
+Route::get('/roomlist','RoomController@getRoomList');
 
 Route::get('/test','MainController@testConnection');

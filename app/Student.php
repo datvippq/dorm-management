@@ -13,7 +13,11 @@ class Student extends Model
 
     public function getById($id)
     {
-      return StudentModel::where('id',$id)->get();
+      return StudentModel::where('id',$id)->first();
+    }
+
+    public function setById($id){
+      
     }
 
 }

@@ -27,12 +27,12 @@ class StudentController extends Controller
   public function getStudentById($id)
   {
     $s = $this->students->getById($id);
-    if(isset($s))
+    if(empty($s))
     {
         echo 'No such student';
     }
     else {
-      echo $s[0]->name . " - " . $s[0]->email . "<br>";
+      echo $s->name . " - " . $s->email . "<br>";
     }
   }
 
